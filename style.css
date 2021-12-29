@@ -1,8 +1,11 @@
 *{
     margin: 0;
     color : black;
+    font-family: 'Roboto', sans-serif;
 }
-
+body {
+    overflow: hidden;
+}
 .wrapper {
     display: flex;
     width: 100%;

@@ -5,11 +5,12 @@
     margin: auto;
 }
 .slide div {
-    transition:ease-in 1s;
+    transition:ease-in .3s;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 .Div {
     flex: 1;

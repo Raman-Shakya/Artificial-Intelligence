@@ -1,0 +1,17 @@
+.introduction {
+    position: absolute;
+    transform: translateX(100%);
+    transition: 1s;
+}
+
+.introduction h1 {
+    font-size: 3em;
+    padding: 30px;
+    color: #888;
+}
+.introduction p {
+    font-size: 1.4em;
+    background: #888;
+    padding: 20px;
+    border-radius: 0 0 2em;
+}
