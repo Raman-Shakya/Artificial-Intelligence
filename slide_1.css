@@ -1,0 +1,41 @@
+.slide {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin: auto;
+}
+.slide div {
+    transition:ease-in 1s;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.Div {
+    flex: 1;
+    position: fixed;
+    background: #aaa;
+    text-align: center;
+    width: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Div2{
+    flex: 1;
+    position: fixed;
+    text-align: center;
+    padding: 20px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.Div3{
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    height: 60px;
+    border-radius: 50%;
+}
