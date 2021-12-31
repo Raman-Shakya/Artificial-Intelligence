@@ -1,4 +1,5 @@
 makeFirstSlide();
+$('.background').polygonizr();
 
 window.addEventListener('keydown', (e)=> {
     if (e.key=='ArrowRight' || e.key=='ArrowDown') {
