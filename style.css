@@ -10,7 +10,8 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
-    background: #222;
+    background: #227;
+    background-image: linear-gradient(#227, #52a);
 }
 .slide-wrapper {
     display: flex;
@@ -18,4 +19,23 @@ body {
     margin: auto;
     width: 80%;
     height: 100vh;
+}
+
+
+
+.names {
+    position: fixed;
+    transition: opacity 1s;
+    transition: 1s;
+    bottom: 0;
+    right: 0;
+    background: rgba(159,159,159,0.7);
+    padding: 30px 20px 20px 40px;
+    border-radius: 1em 0 0 0;
+}
+.names li {
+    list-style-type: '_ ';
+}
+.blurNremove {
+    opacity: 0;
 }

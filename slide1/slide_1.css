@@ -15,17 +15,18 @@
 .Div {
     flex: 1;
     position: fixed;
-    background: #aaa;
+    background: rgba(159,159,159,0.9);
     text-align: center;
     width: 50px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 0.75em;
 }
 
 .Div2{
     flex: 1;
     position: fixed;
     text-align: center;
+    background: rgba(159,159,159,0.8);
     padding: 20px;
     height: 60px;
     width: 150px;
@@ -39,4 +40,7 @@
     padding: 20px;
     height: 60px;
     border-radius: 50%;
+}
+.empchars {
+    background: rgba(159,159,159,0.4);
 }

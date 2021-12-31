@@ -1,10 +1,10 @@
-$('#example').polygonizr({
+$('.background').polygonizr({
 
 
 
     // Indicates the time (in seconds) to pause after a node has reached its destination. 
   
-    restNodeMovements: 1,
+    restNodeMovements: 0,
   
   
   
@@ -88,7 +88,7 @@ $('#example').polygonizr({
   
     // Indicates the ease mode of each node movement (linear, easeIn, easeOut, easeInOut, accelerateDecelerate). 
   
-    nodeEase: "easeOut",
+    nodeEase: "linear",
   
   
   
