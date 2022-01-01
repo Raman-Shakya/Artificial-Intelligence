@@ -58,7 +58,7 @@ $('.background').polygonizr({
   
     // Indicates how many nodes to paint which relation can be filled (note: nodeFillSapce must be set to true). 
   
-    numberOfNodes: 15,
+    numberOfNodes: 25,
   
   
   

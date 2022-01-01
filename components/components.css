@@ -1,15 +1,18 @@
-.introduction {
-    position: relative;
+.components {
     display: none;
     transition: 1s;
+    z-index: 10;
 }
-
-.introduction h1 {
+.components div {
+    display: block;
+    width: 100%;
+}
+.components div h1 {
     font-size: 3em;
     padding: 30px;
     color: rgba(159,159,159,0.7);
 }
-.introduction p {
+.components div p {
     font-size: 1.4em;
     background: rgba(159,159,159,0.7);
     padding: 20px;

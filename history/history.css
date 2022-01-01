@@ -1,7 +1,7 @@
 .history {
-    position: absolute;
-    transform: translateX(100%);
+    display: none;
     transition: 1s;
+    z-index: 10;
 }
 
 .history h1 {

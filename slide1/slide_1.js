@@ -9,23 +9,20 @@ const text_2 = [
     "Current Use",
     "Conclusion",
 ];
-const text_3 = [
-    "Raman Shakya",
-    "Soyam Shrestha",
-    "Nilisha Shakya",
-    "Dipa Gurung",
-];
 
 const N = text_1.length;
 const slide = document.querySelector('.slide');
 
 function makeSlide() {
-    slide.innerHTML = '';
     for (let i=0; i<N; i++) {
-        let temp = document.createElement('div');
+        let temp;
+        if (Current==0)
+            temp = document.querySelector(`.Div:nth-child(${i+1})`);
+        else
+            temp = document.querySelector(`.Div2:nth-child(${i+1})`);
+        temp.innerHTML = '';
         temp.appendChild(document.createElement('p'));
         temp.className = `Div`;
-        slide.appendChild(temp);
     }
 }
 
