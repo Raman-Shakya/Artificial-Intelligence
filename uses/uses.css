@@ -1,27 +1,27 @@
-.components {
+.uses {
     display: none;
     transition: 1s;
     z-index: 10;
 }
-.components div {
+.uses div {
     display: block;
     width: 100%;
 }
-.components div h1 {
+.uses div h1 {
     font-size: 3em;
     padding: 30px;
     color: rgba(159,159,159,0.7);
 }
-.components div div {
+.uses div div {
     display: flex;
     font-size: 1.4em;
     background: rgba(159,159,159,0.7);
     border-radius: 0 0 2em;
 }
 
-.components div div p {
+.uses div div p {
     padding: 20px;
 }
-.components div div img {
+.uses div div img {
     border-radius: 0 0 2em;
 }
