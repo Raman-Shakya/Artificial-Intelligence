@@ -1,0 +1,22 @@
+.ending {
+    display: none;
+    width: 100%;
+    transition: 1s;
+    z-index: 10;
+}
+
+.ending h1 {
+    font-size: 3em;
+    padding: 30px;
+    color: rgba(159,159,159,0.7);
+}
+.ending div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+    background: white;
+    justify-content: space-around;
+}
+.ending div p {
+    padding: 20px;
+}

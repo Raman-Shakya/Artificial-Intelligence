@@ -27,6 +27,10 @@ window.addEventListener('keydown', (e)=> {
             Current_use_show();
             buttons.style.display = "none";
         }
+        else if (Current==6) {
+            Conclusion();
+            buttons.style.display = 'none';
+        }
     }
     else if (e.key=='ArrowLeft' || e.key=='ArrowUp') {
         if (Current==1) {
@@ -52,6 +56,10 @@ window.addEventListener('keydown', (e)=> {
         else if (Current==6) {
             Current_use_back();
             buttons.style.display = 'block';
+        }
+        else if (Current==7) {
+            ConclusionBack();
+            buttons.style.display = 'none';
         }
     }
     else if(e.key=='a') Previous();
