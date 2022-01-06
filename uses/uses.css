@@ -9,7 +9,7 @@
 }
 .uses div h1 {
     font-size: 3em;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
     color: rgba(159,159,159,0.7);
 }
 .uses div div {
@@ -23,5 +23,6 @@
     padding: 20px;
 }
 .uses div div img {
-    border-radius: 0 0 2em;
+    /* border-radius: 0 0 2em; */
+    margin: auto;
 }

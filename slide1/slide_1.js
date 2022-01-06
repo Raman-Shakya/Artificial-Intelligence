@@ -1,65 +1,70 @@
-var Current = 0;
-
-const text_1 = "  AI  ";
-const text_2 = [
-    "Introduction",
-    "History",
-    "Components of AI",
-    "Uses of AI",
-    "Current Use",
-    "Conclusion",
-];
-
-const N = text_1.length;
-const slide = document.querySelector('.slide');
-
 function makeSlide() {
-    for (let i=0; i<N; i++) {
-        let temp;
-        if (Current==0)
-            temp = document.querySelector(`.Div:nth-child(${i+1})`);
-        else
-            temp = document.querySelector(`.Div2:nth-child(${i+1})`);
-        temp.innerHTML = '';
+    const slide = document.querySelector('.slide');
+    slide.innerHTML = '';
+    for (let i=0; i<6; i++) {
+        let temp = document.createElement('div');
         temp.appendChild(document.createElement('p'));
         temp.className = `Div`;
+        slide.appendChild(temp);
     }
 }
 
-function makeFirstSlide() {
-    makeSlide();
-    let width = 70;
-    let maxWidth = 5*width+4*10;
-    for (let i=0; i<N; i++) {
-        let temp = document.querySelector(`.Div:nth-child(${i+1})`);
-        temp.children[0].innerHTML = text_1[i];
-        if (text_1[i]==' ')
-            temp.className +=  ` empchars`;
-        temp.style.marginLeft = `${(i)*width+(i-1)*10 - maxWidth/2}px`;
-    }
-    Current = 0;
-}
-function makeSecondSlide() {
-    document.querySelector('.names').className += ' blurNremove';
-    let cur = 0;
-    let width = 200;
-    let maxWidth = 6*width+5*10;
+function next_slide_1() {
+    document.querySelector('.slide').style.display = 'flex';
     
-    let tempCur = Current;
-
+    if (this.current>1 || this.current<0) return false;
+    
+    let settings = {
+        0: {
+            class: 'Div',
+            text:  '  AI  ',
+            width: 70,
+            maxWidth: 5*70+4*10,
+            delay: 0
+        },
+        1: {
+            class: 'Div2',
+            text: [
+                "Introduction",
+                "History",
+                "Components of AI",
+                "Uses of AI",
+                "Current Use",
+                "Conclusion",
+            ],
+            width: 200,
+            maxWidth: 6*200+5*10,
+            delay: 300
+        }
+    }
+    
+    if (!document.querySelector(`.Div`)) makeSlide();
+    if (this.current==1) document.querySelector('.names').style.display = 'none';
+    if (this.current==0) document.querySelector('.names').style.display = 'block';
+    
+    
+    let cur = 0;
+    let curSlide = this.current;
     let a = setInterval(() => {
         let temp;
-        if (tempCur==0)
-            temp =  document.querySelector(`.Div:nth-child(${cur+1})`);
-        else
-            temp = document.querySelector(`.Div3:nth-child(${cur+1})`);
-        temp.className = `Div2`;
+        
+        temp =  document.querySelector(`.Div:nth-child(${cur+1})`);
+        
+        temp.className = settings[curSlide].class;
         temp.style.zIndex = 6-cur;
-        temp.children[0].innerHTML = text_2[cur++];
-        temp.style.width  = ``;
-        temp.style.height = ``;
-        temp.style.marginLeft = `${(cur-1)*width + (cur-.5)*10 - maxWidth/2}px`;
-        if (cur==N) clearInterval(a);
-    }, 300);
-    Current = 1;
+        let tempChar = settings[curSlide].text[cur++];
+        if (tempChar==' ') temp.className += ' empchars';
+        temp.children[0].innerHTML = tempChar;
+        
+        temp.style.marginLeft = `${(cur-1)*settings[curSlide].width + (cur-.5)*10 - settings[curSlide].maxWidth/2}px`;
+        if (cur==6) clearInterval(a);
+    }, settings[curSlide].delay);
+    
+    
+    return true;
 }
+
+function nextImg_slide_1() { return false; }
+
+slides[0].nextImg = nextImg_slide_1;
+slides[0].next = next_slide_1;

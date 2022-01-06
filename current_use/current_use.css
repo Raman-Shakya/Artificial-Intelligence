@@ -4,22 +4,24 @@
     transition: 1s;
     z-index: 10;
 }
-
-.currentUse h1 {
+.currentUse div {
+    width: 100%;
+}
+.currentUse div h1 {
     font-size: 3em;
     padding: 30px;
     color: rgba(159,159,159,0.7);
 }
-.currentUse div {
+.currentUse div div{
     display: flex;
     justify-content: space-between;
     font-size: 1.4em;
     background: rgba(159,159,159,0.7);
     border-radius: 0 0 2em;
 }
-.currentUse div p {
+.currentUse div div p {
     padding: 20px;
 }
-.currentUse div img {
+.currentUse div div img {
     border-radius: 0 0 2em;
 }

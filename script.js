@@ -1,86 +1,28 @@
-const buttons = document.querySelector('.buttons');
-makeFirstSlide();
-
+var Current=0;
+// event listeners
 window.addEventListener('keydown', (e)=> {
     if (e.key=='ArrowRight' || e.key=='ArrowDown') {
-        if (Current==0) {
-            makeSecondSlide();
-            buttons.style.display = "none";
+        if (slides[Current].nextImg()) {
         }
-        else if (Current==1) {
-            Introduction();
-            buttons.style.display = "none";
+        else if (slides[Current].next()) {
+            slides[Current].current++;
+            slides[Current].nextImg();
         }
-        else if (Current==2) {
-            history();
-            buttons.style.display = "none";
-        }
-        else if (Current==3) {
-            Components();
-            buttons.style.display = "block";
-        }
-        else if (Current==4) {
-            uses();
-            buttons.style.display = "block";
-        }
-        else if (Current==5) {
-            Current_use_show();
-            buttons.style.display = "none";
-        }
-        else if (Current==6) {
-            Conclusion();
-            buttons.style.display = 'none';
+        else {
+            slides[Current].current = 0;
+            slides[Current].remove();
+            Current++;
+            if (Current >= slides.length) Current = slides.length-1;
+            slides[Current].show();
+            slides[Current].nextImg();
         }
     }
     else if (e.key=='ArrowLeft' || e.key=='ArrowUp') {
-        if (Current==1) {
-            makeFirstSlide();
-            buttons.style.display = "none";
-        }
-        else if (Current==2) {
-            IntroBack();
-            buttons.style.display = "none";
-        }
-        else if (Current==3) {
-            HistoryBack();
-            buttons.style.display = "none";
-        }
-        else if (Current==4) {
-            ComponentsBack();
-            buttons.style.display = "none";
-        }
-        else if (Current==5) {
-            UsesBack();
-            buttons.style.display = 'block';
-        }
-        else if (Current==6) {
-            Current_use_back();
-            buttons.style.display = 'block';
-        }
-        else if (Current==7) {
-            ConclusionBack();
-            buttons.style.display = 'none';
-        }
+        slides[Current].currentImgId = 0;
+        slides[Current].current = 0;
+        slides[Current].remove();
+        Current--;
+        if (Current<0) Current = 0;
+        slides[Current].show();
     }
-    else if(e.key=='a') Previous();
-    else if(e.key=='d') Next();
 })
-
-
-
-function Next() {
-    if (Current==4) {
-        componentsNext();
-    }
-    else if (Current==5) {
-        UsesNext();
-    }
-}
-function Previous() {
-    if (Current==4) {
-        componentsPrevious();
-    }
-    else if (Current==5) {
-        UsesPrevious();
-    }
-}
