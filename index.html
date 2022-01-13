@@ -8,17 +8,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Roboto&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="slide1/slide_1.css">
-    <!-- <link rel="stylesheet" href="introduction/introduction.css">
-    <link rel="stylesheet" href="history/history.css">
-    <link rel="stylesheet" href="components/components.css">
-    <link rel="stylesheet" href="uses/uses.css">
-    <link rel="stylesheet" href='current_use/current_use.css'>
-    <link rel="stylesheet" href='conclusion/conclusion.css'> -->
-    <link rel='stylesheet' href='global.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Montserrat:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/slide_1.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="Polygonal-Particles-Background-polygonizr/src/polygonizr.min.js"></script>
@@ -36,6 +30,7 @@
                     <h1>Introduction</h1>
                     <div>
                         <div>
+                            <img src='pictures/intro.gif'>
                         </div>
                         <p>
                             Artificial intelligence (AI) can be said the ability of a computer or a computer-controlled robot to accomplish tasks that only intelligent beings can normally perform. This phrase is generally used to refer to a project that aims to create systems with human-like cognitive abilities, such as the ability to reason, discern meaning, making disicions, and learn from past experiences. Since the invention of computer in the 1940s, it has been proved that computers can be programmed in such a way that it can perform extremely complicated jobs with ease, such as finding proofs for mathematical theorems or playing chess. Despite ongoing increases in computer processing speed and memory capacity, no computer programs have yet to equal human standard of flexibility across broader areas or in activities requiring a great deal of common sense. On the other hand, certain AI have surpassed the performance levels of human specialists and professionals in executing Various jobs. As a result, applications as diverse as medical diagnosis, computer search engines, and voice or handwriting recognition use artificial intelligence.
@@ -47,7 +42,11 @@
                 <div>
                     <h1>History</h1>
                     <div>
-                        <div></div>
+                        <div>
+                            <div class="history_wrapper">
+                                <img src='pictures/History.png'>
+                            </div>
+                        </div>
                         <p>
                             The history of AI began many centurys ago with myths and stories, about beings artificially created and endowed with intelligence and 
                             consciousness by Sorcerer. The seeds of modernized AI were sown by philosophers who attempted to describe the process of human thinking with
@@ -134,8 +133,7 @@
                     <h1>Uses : Gaming</h1>
                     <div>
                         <div>
-                            <img src='pictures/game.jpg'>
-                            <img src="pictures/neural_network.png">
+                            <img src="pictures/gaming.gif">
                         </div>
                         <p>
                             AI can be trained to play many types of games such as chess, sudoku, minesweeper, flappy-bird, etc. The most common method/algorithm of AI in multiplayer board game is minimax which is the algorithm used in chess AI engine. But for many other games, minimax like brute-forcing method might not be viable, so Neural Network is used and is trained based of fitness functions, this kind of AI comes under Machine Learning and is the most powerful AI method.
@@ -147,6 +145,15 @@
                     <h1>Uses : Natural-Language</h1>
                     <div>
                         <div>
+                            <div class=chatbot>
+                                <div class=messages>
+                                    <div>Hey! tell me a joke</div>
+                                    <div>What do you call a sleeping bull?<br>A Bulldozer!</div>
+                                    <div>Wow! thank you</div>
+                                    <div>Your welcome</div>
+                                </div>
+                                <input onkeypress="inputChangedChatBot(this)">
+                            </div>
                         </div>
                         <p>
                             AI models can be trained to understand natural human languages such as English, Nepali, etc. And these AI models can further be used to auto-summarize long piece of documents. These kind of AI models can also be used as chat-bots which can be used for experiments, entertainment, businesses, etc.
@@ -249,17 +256,9 @@
         <li>Nilisha Shakya</li>
     </div>
 
-    <script src="slide.js"></script>
-    
-    <script src='background.js'></script>
-    <script src='slide1/slide_1.js'></script>
-    <script src='introduction/introduction.js'></script>
-    <script src='history/history.js'></script>
-    <script src='components/components.js'></script>
-    <script src='uses/uses.js'></script>
-    <script src='current_use/current_use.js'></script>
-    <script src='conclusion/conclusion.js'></script>
-    
-    <script src='script.js'></script>
+    <script src="js/slide.js"></script>
+    <script src='js/background.js'></script>
+    <script src='js/slide_1.js'></script>    
+    <script src='js/script.js'></script>
 </body>
 </html>

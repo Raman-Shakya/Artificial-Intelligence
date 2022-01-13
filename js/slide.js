@@ -40,3 +40,13 @@ const slide_wrapper = document.querySelector('.slide-wrapper');
 for (let i=0; i<slide_wrapper.childElementCount; i++) {
     slides.push( new Slide(slide_wrapper.children[i]) )
 }
+
+
+
+slides[2].slidePercents = [20, 42, 50, 60, 89, 100];
+slides[2].nextImg = function () {
+    if (this.current >= this.slidePercents.length || this.current < 0) return false;
+    document.querySelector('.history_wrapper').style.height = `${this.slidePercents[this.current]}%`;
+    this.current++;
+    return true;
+}

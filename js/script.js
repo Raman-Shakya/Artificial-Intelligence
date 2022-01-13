@@ -1,7 +1,10 @@
 var Current=0;
+var chatCount = 0;
 // event listeners
 window.addEventListener('keydown', (e)=> {
     if (e.key=='ArrowRight' || e.key=='ArrowDown') {
+        chatCount = 0;
+        for (let message of document.querySelector('.messages').children) message.style.display='none';
         if (slides[Current].nextImg()) {
         }
         else if (slides[Current].next()) {
@@ -26,3 +29,15 @@ window.addEventListener('keydown', (e)=> {
         slides[Current].show();
     }
 })
+
+
+function inputChangedChatBot(e) {
+    let input = document.querySelector('.chatbot input');
+    let messages = document.querySelector('.messages');
+    if (event.key==="Enter") {
+        messages.children[2*chatCount].innerHTML = e.value;
+        messages.children[2*chatCount].style.display   = 'block';
+        window.setTimeout(()=>{messages.children[2*chatCount++ + 1].style.display = 'block';}, 1000);
+        input.value = '';
+    }
+}
