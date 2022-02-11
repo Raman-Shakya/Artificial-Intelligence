@@ -4,21 +4,31 @@
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.background-img {
+    position: fixed;
+    width: 100vw;
+    height:100vh;
+    background: #227;
+    background-image: linear-gradient(#227, #52a);
+}
+.background {
+    position: fixed;
 }
 .wrapper {
     display: flex;
     width: 100%;
     height: 100vh;
-    background: #227;
-    background-image: linear-gradient(#227, #52a);
 }
 .slide-wrapper {
     display: flex;
     align-items: center;
     margin: auto;
     width: 80%;
-    height: 100vh;
+    height: auto;
 }
 
 
@@ -53,3 +63,4 @@ body {
 .buttons button {
     padding: 5px 20px;
 }
+

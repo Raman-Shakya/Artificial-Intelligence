@@ -41,3 +41,22 @@ function inputChangedChatBot(e) {
         input.value = '';
     }
 }
+
+
+
+// onclick open info
+for (let element of document.querySelectorAll(".slide-wrapper div div")) {
+    element.addEventListener("click", () => {
+        for (let ele of document.querySelectorAll(".slide-wrapper div div"))
+            ele.id = "";
+        element.id = "active";
+
+        setTimeout( () => {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'center'
+            });
+        }, 500);
+    });
+}
