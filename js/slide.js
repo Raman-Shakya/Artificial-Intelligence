@@ -7,25 +7,18 @@ class Slide {
     }
     show() {
         this.doc.style.display = 'flex';
-        for (let sub of this.doc.children) {
-            // sub.style.display = 'none';
-        }
         let temp = 0;
         for (;temp<this.doc.childElementCount; temp++) {
             if (this.doc.children[temp].tagName == "DIV") break;
         }
                 
-        this.doc.children[temp].style.display = 'block';
         this.doc.children[temp].id = "active";
 
-        // setTimeout( () => {
-            console.log(temp, this.doc.children[temp])
-            this.doc.children[temp].scrollIntoView({
-                behavior: 'smooth',
-                block: 'center',
-                inline: 'center'
-            });
-        // }, 0);
+        this.doc.children[temp].scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center'
+        });
     }
     remove() {
         this.doc.style.display = 'none';
@@ -67,3 +60,14 @@ slides[2].nextImg = function () {
     this.current++;
     return true;
 }
+
+
+// for (let ele of document.querySelectorAll(`.slide-wrapper > div:not(:first-child) > div > div > div > img`)) {
+//     ele.addEventListener("click", ()=>{
+//         if (ele.classList.contains('img_highlight')) {
+//             ele.classList.remove('img_highlight')
+//         }
+//         else
+//             ele.classList.add('img_highlight');
+//     });
+// }

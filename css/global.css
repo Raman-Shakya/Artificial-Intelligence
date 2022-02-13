@@ -1,5 +1,4 @@
 .slide-wrapper > div:not(:first-child) {
-    display: none;
     z-index: 10;
     flex-direction: column;
     width: 100%;
@@ -10,8 +9,8 @@
     width: 100%;
 }
 .slide-wrapper > div:not(:first-child) > div > h1 {
-    font-size: 3em;
-    padding: 0 30px 30px 30px;
+    font-size: 2em;
+    padding: 20px 30px;
     color: rgba(0,0,0,0.7);
 }
 .slide-wrapper > div:not(:first-child) > div:not(.active) {
@@ -27,6 +26,7 @@
 .slide-wrapper > div:not(:first-child) > div > div {
     max-height: 0;
     overflow: hidden;
+    display: flex;
     flex-direction: row;
     font-size: 1.2em;
     background: rgba(159,159,159,0.7);
@@ -51,15 +51,20 @@
 
 .slide-wrapper > div:not(:first-child) > div > div > p {
     flex: 3;
+    display: block;
     padding: 20px;
 }
 .slide-wrapper > div:not(:first-child) > div > div > div {
     flex: 1;
+    max-height: 80px;
+}
+.slide-wrapper > div:not(:first-child):not(:nth-child(3)) > div > div > div {
+    align-self: center;
 }
 .slide-wrapper > div:not(:first-child) > div > div > div > img {
-    display: none;
     width: 100%;
-    min-height:100%;
+    height: auto;
+    max-height: 100%;
 }
 
 
@@ -67,6 +72,11 @@
 
 #active {
     display: block;
+    transform: scale(102%);
+}
+#active h1 {
+    font-size: 2.5em;
+    color: rgba(0,0,0,0.8);
 }
 #active div {
     display: flex;
@@ -80,7 +90,7 @@
 
 
 .chatbot {
-    display: none;
+    /* display: none; */
     width: 80%;
     height: 13em;
     padding: 10px;

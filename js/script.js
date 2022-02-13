@@ -5,11 +5,11 @@ window.addEventListener('keydown', (e)=> {
     if (e.key=='ArrowRight' || e.key=='ArrowDown') {
         chatCount = 0;
         for (let message of document.querySelector('.messages').children) message.style.display='none';
-        if (slides[Current].nextImg()) {
+        if (false || slides[Current].nextImg()) {
         }
         else if (slides[Current].next()) {
             slides[Current].current++;
-            slides[Current].nextImg();
+            // slides[Current].nextImg();
         }
         else {
             slides[Current].current = 0;
@@ -17,7 +17,7 @@ window.addEventListener('keydown', (e)=> {
             Current++;
             if (Current >= slides.length) Current = slides.length-1;
             slides[Current].show();
-            slides[Current].nextImg();
+            // slides[Current].nextImg();
         }
     }
     else if (e.key=='ArrowLeft' || e.key=='ArrowUp') {

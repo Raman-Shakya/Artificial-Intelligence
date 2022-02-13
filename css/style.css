@@ -51,16 +51,3 @@ body {
 }
 
 
-.buttons {
-    display: none;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    margin: auto;
-    bottom: 0;
-}
-.buttons button {
-    padding: 5px 20px;
-}
-
