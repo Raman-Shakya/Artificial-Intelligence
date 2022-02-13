@@ -7,11 +7,25 @@ class Slide {
     }
     show() {
         this.doc.style.display = 'flex';
-        // for (let sub of this.doc.children) {
-        //     // sub.style.display = 'none';
-        // }
-        // this.doc.children[0].style.display = 'block';
-        this.doc.children[0].class = 'active';
+        for (let sub of this.doc.children) {
+            // sub.style.display = 'none';
+        }
+        let temp = 0;
+        for (;temp<this.doc.childElementCount; temp++) {
+            if (this.doc.children[temp].tagName == "DIV") break;
+        }
+                
+        this.doc.children[temp].style.display = 'block';
+        this.doc.children[temp].id = "active";
+
+        // setTimeout( () => {
+            console.log(temp, this.doc.children[temp])
+            this.doc.children[temp].scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'center'
+            });
+        // }, 0);
     }
     remove() {
         this.doc.style.display = 'none';

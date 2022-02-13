@@ -3,7 +3,7 @@
     z-index: 10;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 100vh;
+    margin: 50vh 0;
 }
 .slide-wrapper > div:not(:first-child) > div {
     display: block;
@@ -37,6 +37,16 @@
 }
 .slide-wrapper > div:not(:first-child) > div:nth-child(1) > div {
     display: flex;
+}
+
+.slide-wrapper > div:not(:first-child) > h1 {
+    font-size: 5rem;
+    margin: 50px;
+    width: 100vh;
+    color: rgba(255,255,255,0.5);
+	text-shadow: -1px 1px 0 #0003,
+				  1px 1px 0 #0003,
+				  1px -1px 0 #0003;
 }
 
 .slide-wrapper > div:not(:first-child) > div > div > p {
