@@ -1,5 +1,7 @@
 # Artificial-Intelligence
  Presentation on AI(Artificial Intelligence)
+ 
+ ```this is not an AI program, it was just short presentation for our school project```
 
 # install
 ```
